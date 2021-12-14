@@ -3,7 +3,7 @@ Mi dirección de github es la siguiente:
 
 https://github.com/ESTHERRODRIGUEZGARCIA/EXAMEN.git
 
-# EJERCICIO 1
+# EJERCICIO 1 THE MINION GAME
 
 # EJERCICIO 2
 ````
