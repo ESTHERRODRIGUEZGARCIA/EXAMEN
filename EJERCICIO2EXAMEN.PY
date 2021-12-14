@@ -5,3 +5,5 @@ def encerrada(fila,columna):
     elif fila ==1:
         if tablero[fila+1][columna] != " ":
             error = True
+        else:
+            error = False
