@@ -6,6 +6,8 @@ def jugador1():
     jugador1= str(input())
     listajugador1 = []
     global puntuacion1
+    
+
     for i in range(2):
         letra = random.randint()
         listajugador1.append(letra)
@@ -35,7 +37,8 @@ def jugador2():
     jugador2= str(input())
     listajugador2 = []
     global puntuacion2
-    for i in range(2):
+    
+    for i in range():
         letra = random.randint()
         listajugador2.append(letra)
     valor1=listajugador2[0]
