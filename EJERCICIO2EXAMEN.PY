@@ -4,6 +4,12 @@ import os
 import re
 import sys
 
+tablero = [
+    ['  ', '  ', '  '], 
+    ['  ', '  ', '  '],
+    ['  ', '  ', '  '], 
+   ]
+
 def encerrada(fila,columna):
     if fila == 0 and tablero[fila+1][columna] != " ":
         error = True
