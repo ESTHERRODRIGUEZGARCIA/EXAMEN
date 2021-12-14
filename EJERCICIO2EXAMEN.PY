@@ -8,7 +8,17 @@ tablero = [
     ['  ', '  ', '  '], 
     ['  ', '  ', '  '],
     ['  ', '  ', '  '], 
-   ]
+    ]
+
+x = randint(0,2)
+y = randint(0,2)
+z = randint(0,2)
+a = randint(0,2)
+b = randint(0,2)
+c = randint(0,2)
+
+while a == x:
+    a = randint(0,2)
 
 def encerrada(fila,columna):
     if fila == 0 and tablero[fila+1][columna] != " ":
