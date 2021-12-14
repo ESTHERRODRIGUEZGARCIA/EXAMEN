@@ -1,5 +1,8 @@
-# EXAMEN
+# EXAMEN ESTHER ROFRÍGUEZ GARCÍA
+mi dirección de github es la siguiente:
 
+# EJERCICIO 1
+# EJERCICIO 2
 ````
 from random import randint
 from sys import breakpointhook
