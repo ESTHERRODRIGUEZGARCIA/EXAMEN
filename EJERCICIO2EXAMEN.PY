@@ -6,9 +6,7 @@ import sys
 import chess
 
 #Comienzo definiendo el tablero y la posición aleatoria de las piezas
-board=('♜\t♜\t♜\t') 
-#tupla pues este tablero es siempre el mismo
-print(board)
+
 
 tablero = [
     ['  ', '  ', '  '], 
