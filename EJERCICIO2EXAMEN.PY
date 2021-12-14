@@ -1,40 +1,10 @@
 from random import randint
-import math
-import os
-import re
-import sys
+from sys import breakpointhook
+
 import chess
 
 #Comienzo definiendo el tablero y la posición aleatoria de las piezas
 
-tablero = [
-    ['  ', '  ', '  '], 
-    ['  ', '  ', '  '],
-    ['  ', '  ', '  '], 
-    ]
-
-x = randint(0,2)
-y = randint(0,2)
-z = randint(0,2)
-a = randint(0,2)
-b = randint(0,2)
-c = randint(0,2)
-
-(tablero[x])[0] = "♜"
-(tablero[y])[1] = "♜"
-(tablero[z])[2] = "♜"
-(tablero[a])[0] = "♖"
-(tablero[b])[1] = "♖"
-(tablero[c])[2] = "♖"
-
-print(tablero)
-
-while a == x:
-    x = randint(0,2)
-while b == y:
-    y = randint(0,2)
-while c == z:
-    z = randint(0,2)
 
 #SEGUNDA PARTE 
 
@@ -87,24 +57,55 @@ def cambio(fila, columna):
     elif fila == 2:
         fila -= 1
     return fila
+#Comienzo definiendo el tablero y la posición aleatoria de las piezas
 
-while True:
-    encerradax = encerrada(x,0)
-    encerraday = encerrada(y,1)
-    encerradaz = encerrada(z,2)
-    encerradaa = encerrada(a,0)
-    encerradab = encerrada(b,1)
-    encerradac = encerrada(c,2)
-    if encerradax == True and encerraday == True and encerradaz == True:
-        print("El jugador 1 no puede mover. Nueva creación del tablero. ")
-        pass
-    elif encerradaa == True and encerradab == True and encerradac == True:
-        print("El jugador 2 no puede mover. Nueva creación del tablero. ")
-        pass
-    else: 
-        break
+tablero = [
+    ['  ', '  ', '  '], 
+    ['  ', '  ', '  '],
+    ['  ', '  ', '  '], 
+    ]
+
+x = randint(0,2)
+y = randint(0,2)
+z = randint(0,2)
+a = randint(0,2)
+b = randint(0,2)
+c = randint(0,2)
+
+while a == x:
+    x = randint(0,2)
+while b == y:
+    y = randint(0,2)
+while c == z:
+    z = randint(0,2)
+
+(tablero[x])[0] = "♜"
+(tablero[y])[1] = "♜"
+(tablero[z])[2] = "♜"
+(tablero[a])[0] = "♖"
+(tablero[b])[1] = "♖"
+(tablero[c])[2] = "♖"
+
+muestra_ajedrez(tablero)
+
+encerradax = encerrada(x,0)
+encerraday = encerrada(y,1)
+encerradaz = encerrada(z,2)
+encerradaa = encerrada(a,0)
+encerradab = encerrada(b,1)
+encerradac = encerrada(c,2)
+
+if encerradax == True and encerraday == True and encerradaz == True:
+    print("El jugador 1 no puede mover. Nueva creación del tablero. ")
+    pass
+elif encerradaa == True and encerradab == True and encerradac == True:
+    print("El jugador 2 no puede mover. Nueva creación del tablero. ")
+    pass
+else:
+    breakpointhook
     
 turno = randint(0,1)
+
 while True:
     if turno ==1:
         if encerradax == False and encerradaa == False:
@@ -135,8 +136,9 @@ while True:
             break
         turno = 1
     muestra_ajedrez(tablero)
-muestra_ajedrez(tablero)
 
+
+muestra_ajedrez(tablero)
 if encerradax == True and encerraday == True and encerradaz == True:
     print("El jugador 1 no se puede mover, ha ganado el jugador 2")
 elif encerradaa == True and encerradab == True and encerradac == True:
