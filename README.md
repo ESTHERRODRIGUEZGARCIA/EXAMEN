@@ -1,7 +1,10 @@
 # EXAMEN ESTHER ROFRÍGUEZ GARCÍA
-mi dirección de github es la siguiente:
+Mi dirección de github es la siguiente:
+
+https://github.com/ESTHERRODRIGUEZGARCIA/EXAMEN.git
 
 # EJERCICIO 1
+
 # EJERCICIO 2
 ````
 from random import randint
